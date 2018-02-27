@@ -48,7 +48,7 @@ namespace Portfilio_Analize
                 string[] oneFile = System.IO.File.ReadAllLines(filePath);
 
                 //createStructFrom(oneFile: oneFile, debug: false);
-                Console.WriteLine(oneFile);
+                Console.WriteLine("Here is the first line of csv file as a string array\n " + oneFile[0] + "\n");
             }
             catch (Exception e)
             {

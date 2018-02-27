@@ -9,9 +9,7 @@ namespace Portfilio_Analize
 {
     class Program
     {
-        
-        //private static string[] fileNames;
-
+    
         private struct TradeResults
         {
             /// Trade Count, Date In, Date Out, Ticker, profit, cumProfit,
@@ -35,15 +33,14 @@ namespace Portfilio_Analize
         };
 
         private List<TradeResults> allTradeResults = new List<TradeResults>();
-        private static int fileCount;
-        private int filesParsedCount;
 
         static void Main(string[] args)
         {
+            // Get CSV
             CSVhelp csvhelp = new CSVhelp();
             var fileNames = csvhelp.GetFileNames();
             csvhelp.readAllofThe(fileNames: fileNames, debug: true);
-     
+            // Save CSV to realm
             Console.ReadLine();
         }
 
