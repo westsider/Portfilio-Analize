@@ -10,42 +10,28 @@ namespace Portfilio_Analize
     class Program
     {
     
-        //private struct TradeResults
-        //{
-        //    /// Trade Count, Date In, Date Out, Ticker, profit, cumProfit,
-        //    public int tradeNum { get; set; }
-        //    public string dateEntry { get; set; }
-        //    public string dateExit { get; set; }
-        //    public string ticker { get; set; }
-        //    public double profit { get; set; }
-        //    public double cumProfit { get; set; }
-
-        //    /// exit name, profit factor, winPct, Consecutive losers, 
-        //    public string exitName { get; set; }
-        //    public double profitFactor { get; set; }
-        //    public double winPct { get; set; }
-        //    public int consecutiveLosers { get; set; }
-
-        //    /// largest loser, largest winner, profit per month
-        //    public double largestLoser { get; set; }
-        //    public double largestWinner { get; set; }
-        //    public double profitPerMonth { get; set; }
-        //};
+        // walk through SQL https://www.youtube.com/watch?v=Et2khGnrIqc
 
         //private List<TradeResults> allTradeResults = new List<TradeResults>();
+
+        List<TradeResults> tradeResults = new List<TradeResults>();
 
         static void Main(string[] args)
         {
             // Get CSV
             CSVhelp csvhelp = new CSVhelp();
             var fileNames = csvhelp.GetFileNames();
-            csvhelp.readAllofThe(fileNames: fileNames, debug: true);
-            // Save CSV to realm
+            csvhelp.getAllofThe(fileNames: fileNames, debug: true);
+            // Save CSV to SQL
             Console.ReadLine();
         }
 
-        
-        
-       
+        public void searchButton()
+        {
+            DataAccess db = new DataAccess();
+            tradeResults = db.GetData("AAPL");
+        }
+
+
     }
 }

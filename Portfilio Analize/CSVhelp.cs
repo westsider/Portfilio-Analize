@@ -11,9 +11,6 @@ namespace Portfilio_Analize
     {
         public static string systemPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
-		/// 									Get file names
-		/// ////////////////////////////////////////////////////////////////////////////////////////////////
 		public  string[] GetFileNames()
         {
 
@@ -24,10 +21,8 @@ namespace Portfilio_Analize
             //fileCount = array1.Length;
             return array1;
         }
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
-		/// 									Read files in folder
-		/// ////////////////////////////////////////////////////////////////////////////////////////////////
-		public void readAllofThe(string[] fileNames, bool debug)
+ 
+		public void getAllofThe(string[] fileNames, bool debug)
         {
             Console.WriteLine("--- Got " + fileNames.Length.ToString() + " CSV Files: ---");
             foreach (string name in fileNames)
@@ -37,9 +32,6 @@ namespace Portfilio_Analize
             }
         }
 
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
-        /// 									Read entire CSV 
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
         public  void readAllLinesFrom(string filePath, bool debug)
         {
 
