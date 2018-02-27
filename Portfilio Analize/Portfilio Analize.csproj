@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSVhelp.cs" />
+    <Compile Include="DataConvert.cs" />
     <Compile Include="DateAccess.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />

@@ -34,12 +34,16 @@ namespace Portfilio_Analize
 
         public  void readAllLinesFrom(string filePath, bool debug)
         {
-
+            DataAccess db = new DataAccess();
+            
             try
             {
                 string[] oneFile = System.IO.File.ReadAllLines(filePath);
 
                 //createStructFrom(oneFile: oneFile, debug: false);
+                DataConvert da = new DataConvert();
+                da.createStructFrom(oneFile: oneFile, debug: true);
+
                 Console.WriteLine("Here is the first line of csv file as a string array\n " + oneFile[0] + "\n");
             }
             catch (Exception e)

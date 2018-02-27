@@ -32,6 +32,11 @@ namespace Portfilio_Analize
             tradeResults = db.GetData("AAPL");
         }
 
+        public void setButton()
+        {
+            DataAccess db = new DataAccess();
+            tradeResults = db.GetData("AAPL");
+        }
 
     }
 }

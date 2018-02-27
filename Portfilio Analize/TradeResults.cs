@@ -22,18 +22,12 @@ namespace Portfilio_Analize
         public double largestWinner { get; set; }
         public double profitPerMonth { get; set; }
 
-
         public string FullInfo
         {
             get
             {
                 return $"{ dateEntry } { ticker } { dateExit }";
             }
-           
         }
-
-
-
-
     }
 }
