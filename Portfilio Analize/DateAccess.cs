@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
+using System.Data;
 
 namespace Portfilio_Analize
 {
@@ -10,7 +12,10 @@ namespace Portfilio_Analize
     {
         public List<TradeResults> GetData(string ticker)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Portfilio_Analize.Properties.Settings.simplDatabaseConnectionString")))
+            {
+                return connection.Query<TradeResults>($"select * from TradeResults where ticker = '{ ticker }'").ToList();
+            }
         }
     }
 }

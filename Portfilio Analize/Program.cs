@@ -9,8 +9,8 @@ namespace Portfilio_Analize
 {
     class Program
     {
-    
-        // walk through SQL https://www.youtube.com/watch?v=Et2khGnrIqc
+        // walk though the basics of SQL https://www.lynda.com/Visual-Studio-tutorials/Visual-Studio-2015-Essentials-13-Data-Tools/499763-2.html
+        // walk through SQL read and write https://www.youtube.com/watch?v=Et2khGnrIqc
 
         //private List<TradeResults> allTradeResults = new List<TradeResults>();
 
