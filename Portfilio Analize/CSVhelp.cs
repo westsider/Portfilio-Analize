@@ -39,12 +39,16 @@ namespace Portfilio_Analize
             try
             {
                 string[] oneFile = System.IO.File.ReadAllLines(filePath);
-
-                //createStructFrom(oneFile: oneFile, debug: false);
-                DataConvert da = new DataConvert();
-                da.createStructFrom(oneFile: oneFile, debug: true);
-
                 Console.WriteLine("Here is the first line of csv file as a string array\n " + oneFile[0] + "\n");
+
+                DataConvert da = new DataConvert();
+                // might need a completion handler for this
+                da.createStructFrom(oneFile: oneFile, debug: true);
+                var allStructs = da.allTradeResults;
+                Console.WriteLine("Here is the last struct array \n " + allStructs.Last().dateEntry + "\n");
+
+                // send to SQL
+               
             }
             catch (Exception e)
             {

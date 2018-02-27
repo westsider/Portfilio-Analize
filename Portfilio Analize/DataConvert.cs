@@ -9,7 +9,7 @@ namespace Portfilio_Analize
     class DataConvert
     {
         private TradeResults tradeResults = new TradeResults { };
-        private List<TradeResults> allTradeResults = new List<TradeResults>();
+        public List<TradeResults> allTradeResults = new List<TradeResults>();
         private int fileCount;
         private int filesParsedCount;
 
@@ -74,6 +74,7 @@ namespace Portfilio_Analize
                              );
                     }
                 }
+                //return allTradeResults;
             }
 
         }
