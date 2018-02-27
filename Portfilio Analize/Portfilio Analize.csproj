@@ -80,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>simplDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TradeResults.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
